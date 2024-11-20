@@ -6,6 +6,7 @@ import { CoinContext } from '../../context/CoinContext'
 
 const Navbar = () => {
   const {setCurrency} = useContext(CoinContext);
+
   const currencyHandler = (e) => {
     switch(e.target.value){
       case "usd":{

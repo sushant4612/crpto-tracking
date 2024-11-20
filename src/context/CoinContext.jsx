@@ -20,14 +20,17 @@ const CoinContextProvider = (props) => {
             .then(res => setAllCoin(res))
             .catch(err => console.error(err));
     }
-
+    
     useEffect(() => {
         fetchAllCoin()
+        // console.log(currency);
+        
     },[currency]);
 
     const contextValue = {
         allCoin, currency, setCurrency
     }
+
     return (
         <CoinContext.Provider value={contextValue}>
             {props.children}
